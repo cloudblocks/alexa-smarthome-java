@@ -6,7 +6,7 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 import java.util.List;
 
 public class DiscoverAppliancesResponse implements Response {
-  private List<Endpoint> discoveredEndpoints;
+  private List<Endpoint> endpoints;
 
   @Override
   public MessageName getMessageName() {
@@ -14,10 +14,10 @@ public class DiscoverAppliancesResponse implements Response {
   }
 
   public List<Endpoint> getDiscoveredEndpoints() {
-    return discoveredEndpoints;
+    return endpoints;
   }
 
-  public void setDiscoveredEndpoints(List<Endpoint> discoveredEndpoints) {
-    this.discoveredEndpoints = discoveredEndpoints;
+  public void setDiscoveredEndpoints(List<Endpoint> endpoints) {
+    this.endpoints = endpoints;
   }
 }

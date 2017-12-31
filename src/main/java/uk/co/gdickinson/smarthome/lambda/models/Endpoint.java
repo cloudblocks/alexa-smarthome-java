@@ -68,4 +68,12 @@ public class Endpoint {
   public void setAdditionalApplianceDetails(Map<String, String> additionalApplianceDetails) {
     this.additionalApplianceDetails = additionalApplianceDetails;
   }
+
+  public List<Capability> getCapabilities() {
+    return capabilities;
+  }
+
+  public void setCapabilities(List<Capability> capabilities) {
+    this.capabilities = capabilities;
+  }
 }

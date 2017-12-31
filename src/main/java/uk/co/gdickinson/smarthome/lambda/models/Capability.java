@@ -3,6 +3,9 @@ package uk.co.gdickinson.smarthome.lambda.models;
 import com.google.gson.annotations.SerializedName;
 
 public class Capability {
+    public static final String VERSION_INTERFACE_V3 = "3";
+    public static final String TYPE_ALEXA_INTERFACE = "AlexaInterface";
+
     private String type;
 
     @SerializedName("interface")

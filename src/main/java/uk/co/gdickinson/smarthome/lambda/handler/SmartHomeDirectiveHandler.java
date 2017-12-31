@@ -56,10 +56,10 @@ public abstract class SmartHomeDirectiveHandler implements RequestStreamHandler 
     responseHeader.setPayloadVersion(request.getDirective().getHeader().getPayloadVersion());
     responseHeader.setNamespace(request.getDirective().getHeader().getNamespace());
 
-    response.setEvent(event);
+    event.setHeader(responseHeader);
+    event.setPayload(responsePayload);
 
-    response.getEvent().setHeader(responseHeader);
-    response.getEvent().setPayload(responsePayload);
+    response.setEvent(event);
 
     OutputStreamWriter writer = new OutputStreamWriter(outputStream);
     writer.write(gson.toJson(response, SmartHomeDirectiveResponse.class));
