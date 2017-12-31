@@ -5,6 +5,7 @@ import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import uk.co.gdickinson.smarthome.lambda.payload.Event;
 import uk.co.gdickinson.smarthome.lambda.payload.Header;
 import uk.co.gdickinson.smarthome.lambda.codec.PayloadDeserializer;
 import uk.co.gdickinson.smarthome.lambda.codec.SmartHomeDirectiveRequest;
@@ -35,7 +36,7 @@ public abstract class SmartHomeDirectiveHandler implements RequestStreamHandler 
   public final void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
     JsonReader reader = new JsonReader(new InputStreamReader(inputStream));
     SmartHomeDirectiveRequest request = gson.fromJson(reader, SmartHomeDirectiveRequest.class);
-    RequestHandler handler = factory.getHandler(request.getHeader().getName());
+    RequestHandler handler = factory.getHandler(request.getDirective().getHeader().getName());
     Request req = PayloadDeserializer.deserializePayload(request);
     Response responsePayload;
 
@@ -47,15 +48,18 @@ public abstract class SmartHomeDirectiveHandler implements RequestStreamHandler 
 
 
     SmartHomeDirectiveResponse response = new SmartHomeDirectiveResponse();
+    Event event = new Event();
 
     Header responseHeader = new Header();
     responseHeader.setName(responsePayload.getMessageName());
-    responseHeader.setMessageId(request.getHeader().getMessageId());
-    responseHeader.setPayloadVersion(request.getHeader().getPayloadVersion());
-    responseHeader.setNamespace(request.getHeader().getNamespace());
+    responseHeader.setMessageId(request.getDirective().getHeader().getMessageId());
+    responseHeader.setPayloadVersion(request.getDirective().getHeader().getPayloadVersion());
+    responseHeader.setNamespace(request.getDirective().getHeader().getNamespace());
 
-    response.setHeader(responseHeader);
-    response.setPayload(responsePayload);
+    response.setEvent(event);
+
+    response.getEvent().setHeader(responseHeader);
+    response.getEvent().setPayload(responsePayload);
 
     OutputStreamWriter writer = new OutputStreamWriter(outputStream);
     writer.write(gson.toJson(response, SmartHomeDirectiveResponse.class));

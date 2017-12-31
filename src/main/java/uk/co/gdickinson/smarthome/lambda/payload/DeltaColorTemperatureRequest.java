@@ -1,15 +1,15 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
-import uk.co.gdickinson.smarthome.lambda.models.Appliance;
+import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 
 abstract class DeltaColorTemperatureRequest<R extends Response> extends Request<R> {
-  private Appliance appliance;
+  private Endpoint endpoint;
 
-  public Appliance getAppliance() {
-    return appliance;
+  public Endpoint getEndpoint() {
+    return endpoint;
   }
 
-  public void setAppliance(Appliance appliance) {
-    this.appliance = appliance;
+  public void setEndpoint(Endpoint endpoint) {
+    this.endpoint = endpoint;
   }
 }

@@ -3,8 +3,8 @@ package uk.co.gdickinson.smarthome.lambda.models;
 import com.google.gson.annotations.SerializedName;
 
 public enum Namespace {
-  @SerializedName("Alexa.ConnectedHome.Discovery")
-  DISCOVERY("Alexa.ConnectedHome.Discovery"),
+  @SerializedName("Alexa.Discovery")
+  DISCOVERY("Alexa.Discovery"),
 
   @SerializedName("Alexa.ConnectedHome.Control")
   CONTROL("Alexa.ConnectedHome.Control"),

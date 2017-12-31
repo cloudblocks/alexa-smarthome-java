@@ -1,43 +1,36 @@
 package uk.co.gdickinson.smarthome.lambda.codec;
 
 import com.google.gson.JsonElement;
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+import uk.co.gdickinson.smarthome.lambda.payload.Directive;
 import uk.co.gdickinson.smarthome.lambda.payload.Header;
 
 public class SmartHomeDirectiveRequest {
-  private Header header;
-  private JsonElement payload;
+  private Directive directive;
 
-  public JsonElement getPayload() {
-    return payload;
+  public Directive getDirective() {
+    return directive;
   }
 
-  public void setPayload(JsonElement payload) {
-    this.payload = payload;
-  }
-
-  public Header getHeader() {
-    return header;
-  }
-
-  public void setHeader(Header header) {
-    this.header = header;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-
-    SmartHomeDirectiveRequest that = (SmartHomeDirectiveRequest) o;
-
-    if (!getHeader().equals(that.getHeader())) return false;
-    return getPayload().equals(that.getPayload());
+  public void setDirective(Directive directive) {
+    this.directive = directive;
   }
 
   @Override
   public int hashCode() {
-    int result = getHeader().hashCode();
-    result = 31 * result + getPayload().hashCode();
-    return result;
+    return new HashCodeBuilder().append(directive).toHashCode();
+  }
+
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+    if ((other instanceof SmartHomeDirectiveRequest) == false) {
+      return false;
+    }
+    SmartHomeDirectiveRequest rhs = ((SmartHomeDirectiveRequest) other);
+    return new EqualsBuilder().append(directive, rhs.directive).isEquals();
   }
 }

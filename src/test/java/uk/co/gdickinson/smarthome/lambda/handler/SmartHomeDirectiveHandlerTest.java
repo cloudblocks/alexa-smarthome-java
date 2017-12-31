@@ -5,6 +5,7 @@ import org.junit.Test;
 import uk.co.gdickinson.smarthome.lambda.codec.SmartHomeDirectiveRequest;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 import uk.co.gdickinson.smarthome.lambda.models.Namespace;
+import uk.co.gdickinson.smarthome.lambda.payload.Directive;
 import uk.co.gdickinson.smarthome.lambda.payload.GetTemperatureReadingRequest;
 import uk.co.gdickinson.smarthome.lambda.payload.GetTemperatureReadingResponse;
 import uk.co.gdickinson.smarthome.lambda.payload.Header;
@@ -38,13 +39,15 @@ public class SmartHomeDirectiveHandlerTest {
   public void handleRequestSuccessfully() throws Exception {
 
     SmartHomeDirectiveRequest req = new SmartHomeDirectiveRequest();
+    Directive directive = new Directive();
     Header header = new Header();
     header.setName(MessageName.GET_TEMPERATURE_READING_REQUEST);
     header.setNamespace(Namespace.CONTROL);
     header.setPayloadVersion("version");
     header.setMessageId("messageId");
-    req.setHeader(header);
-    req.setPayload(gson.toJsonTree(TEST_REQUEST, GetTemperatureReadingRequest.class));
+    req.setDirective(directive);
+    req.getDirective().setHeader(header);
+    req.getDirective().setPayload(gson.toJsonTree(TEST_REQUEST, GetTemperatureReadingRequest.class));
     byte[] requestBytes = gson.toJson(req).getBytes();
 
     InputStream in = new ByteArrayInputStream(requestBytes);

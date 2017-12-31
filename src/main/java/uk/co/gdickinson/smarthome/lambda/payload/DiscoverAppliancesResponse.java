@@ -1,23 +1,23 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
-import uk.co.gdickinson.smarthome.lambda.models.Appliance;
+import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
 import java.util.List;
 
 public class DiscoverAppliancesResponse implements Response {
-  private List<Appliance> discoveredAppliances;
+  private List<Endpoint> discoveredEndpoints;
 
   @Override
   public MessageName getMessageName() {
     return MessageName.DISCOVER_APPLIANCES_RESPONSE;
   }
 
-  public List<Appliance> getDiscoveredAppliances() {
-    return discoveredAppliances;
+  public List<Endpoint> getDiscoveredEndpoints() {
+    return discoveredEndpoints;
   }
 
-  public void setDiscoveredAppliances(List<Appliance> discoveredAppliances) {
-    this.discoveredAppliances = discoveredAppliances;
+  public void setDiscoveredEndpoints(List<Endpoint> discoveredEndpoints) {
+    this.discoveredEndpoints = discoveredEndpoints;
   }
 }

@@ -1,11 +1,11 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
 import uk.co.gdickinson.smarthome.lambda.models.AchievedState;
-import uk.co.gdickinson.smarthome.lambda.models.Appliance;
+import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 
 abstract class ColorTemperatureChangeConfirmation implements Response {
   private AchievedState achievedState;
-  private Appliance appliance;
+  private Endpoint endpoint;
 
   public AchievedState getAchievedState() {
     return achievedState;
@@ -15,11 +15,11 @@ abstract class ColorTemperatureChangeConfirmation implements Response {
     this.achievedState = achievedState;
   }
 
-  public Appliance getAppliance() {
-    return appliance;
+  public Endpoint getEndpoint() {
+    return endpoint;
   }
 
-  public void setAppliance(Appliance appliance) {
-    this.appliance = appliance;
+  public void setEndpoint(Endpoint endpoint) {
+    this.endpoint = endpoint;
   }
 }

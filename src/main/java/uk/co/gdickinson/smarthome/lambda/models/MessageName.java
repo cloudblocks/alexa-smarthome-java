@@ -13,10 +13,10 @@ public enum MessageName {
   @SerializedName("DecrementTargetTemperatureConfirmation")
   DECREMENT_TARGET_TEMPERATURE_CONFIRMATION(DecrementTargetTemperatureConfirmation.class),
 
-  @SerializedName("DiscoverAppliancesRequest")
+  @SerializedName("Discover")
   DISCOVER_APPLIANCES_REQUEST(DiscoverAppliancesRequest.class),
 
-  @SerializedName("DiscoverAppliancesResponse")
+  @SerializedName("Discover.Response")
   DISCOVER_APPLIANCES_RESPONSE(DiscoverAppliancesResponse.class),
 
   @SerializedName("DecrementColorTemperatureRequest")

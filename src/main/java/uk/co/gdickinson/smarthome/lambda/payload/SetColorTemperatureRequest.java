@@ -1,6 +1,6 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
-import uk.co.gdickinson.smarthome.lambda.models.Appliance;
+import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 import uk.co.gdickinson.smarthome.lambda.models.ColorTemperature;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
@@ -18,18 +18,18 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
  * daylight, daylight white  5500
  * cool, cool white          7000
  *
- * Expect only Appliance.applianceId and Appliance.additionalApplianceDetails to be set.
+ * Expect only Endpoint.applianceId and Endpoint.additionalApplianceDetails to be set.
  */
 public class SetColorTemperatureRequest extends Request<SetColorTemperatureConfirmation> {
-  private Appliance appliance;
+  private Endpoint endpoint;
   private ColorTemperature colorTemperature;
 
-  public Appliance getAppliance() {
-    return appliance;
+  public Endpoint getEndpoint() {
+    return endpoint;
   }
 
-  public void setAppliance(Appliance appliance) {
-    this.appliance = appliance;
+  public void setEndpoint(Endpoint endpoint) {
+    this.endpoint = endpoint;
   }
 
   public ColorTemperature getColorTemperature() {

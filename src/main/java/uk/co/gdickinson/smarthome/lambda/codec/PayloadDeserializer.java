@@ -8,6 +8,6 @@ public class PayloadDeserializer {
   private static Gson gson = new Gson();
 
   public static <T extends Request<R>, R extends Response> T deserializePayload(SmartHomeDirectiveRequest request) {
-    return gson.fromJson(request.getPayload(), request.getHeader().getName().getDeserializationType());
+    return gson.fromJson(request.getDirective().getPayload(), request.getDirective().getHeader().getName().getDeserializationType());
   }
 }
