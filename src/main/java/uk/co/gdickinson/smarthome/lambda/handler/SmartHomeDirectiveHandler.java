@@ -36,6 +36,7 @@ public abstract class SmartHomeDirectiveHandler implements RequestStreamHandler 
   public final void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
     JsonReader reader = new JsonReader(new InputStreamReader(inputStream));
     SmartHomeDirectiveRequest request = gson.fromJson(reader, SmartHomeDirectiveRequest.class);
+    System.out.println("In Request:" + gson.toJson(request));
     RequestHandler handler = factory.getHandler(request.getDirective().getHeader().getName());
     Request req = PayloadDeserializer.deserializePayload(request);
     Response responsePayload;

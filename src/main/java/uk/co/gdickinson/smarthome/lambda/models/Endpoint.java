@@ -10,8 +10,6 @@ public class Endpoint {
   private String description;
   private List<DisplayCategories> displayCategories;
   private List<Capability> capabilities = null;
-  private List<Action> actions;
-  private Map<String, String> additionalApplianceDetails;
 
   public List<DisplayCategories> getDisplayCategories() {
     return displayCategories;
@@ -51,22 +49,6 @@ public class Endpoint {
 
   public void setDescription(String description) {
     this.description = description;
-  }
-
-  public List<Action> getActions() {
-    return actions;
-  }
-
-  public void setActions(List<Action> actions) {
-    this.actions = actions;
-  }
-
-  public Map<String, String> getAdditionalApplianceDetails() {
-    return additionalApplianceDetails;
-  }
-
-  public void setAdditionalApplianceDetails(Map<String, String> additionalApplianceDetails) {
-    this.additionalApplianceDetails = additionalApplianceDetails;
   }
 
   public List<Capability> getCapabilities() {

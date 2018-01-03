@@ -3,9 +3,11 @@ package uk.co.gdickinson.smarthome.lambda.payload;
 import com.google.gson.JsonElement;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 
 public class Directive {
     private Header header;
+    private JsonElement endpoint;
     private JsonElement payload;
 
     public Header getHeader() {
@@ -22,6 +24,14 @@ public class Directive {
 
     public void setPayload(JsonElement payload) {
         this.payload = payload;
+    }
+
+    public JsonElement getEndpoint() {
+        return endpoint;
+    }
+
+    public void setEndpoint(JsonElement endpoint) {
+        this.endpoint = endpoint;
     }
 
     @Override

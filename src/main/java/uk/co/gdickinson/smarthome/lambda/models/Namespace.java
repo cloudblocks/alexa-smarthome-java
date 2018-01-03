@@ -6,7 +6,7 @@ public enum Namespace {
   @SerializedName("Alexa.Discovery")
   DISCOVERY("Alexa.Discovery"),
 
-  @SerializedName("Alexa.ConnectedHome.Control")
+  @SerializedName("Alexa.PowerController")
   CONTROL("Alexa.ConnectedHome.Control"),
 
   @SerializedName("Alexa.ConnectedHome.Query")

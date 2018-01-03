@@ -79,10 +79,10 @@ public enum MessageName {
   @SerializedName("SetTargetTemperatureConfirmation")
   SET_TARGET_TEMPERATURE_CONFIRMATION(SetTargetTemperatureConfirmation.class),
 
-  @SerializedName("TurnOnRequest")
+  @SerializedName("TurnOn")
   TURN_ON_REQUEST(TurnOnRequest.class),
 
-  @SerializedName("TurnOnConfirmation")
+  @SerializedName("Response")
   TURN_ON_CONFIRMATION(TurnOnConfirmation.class),
 
   @SerializedName("TurnOffRequest")
