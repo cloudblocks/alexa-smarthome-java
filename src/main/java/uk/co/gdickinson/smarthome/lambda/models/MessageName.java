@@ -85,10 +85,10 @@ public enum MessageName {
   @SerializedName("Response")
   TURN_ON_CONFIRMATION(TurnOnConfirmation.class),
 
-  @SerializedName("TurnOffRequest")
+  @SerializedName("TurnOff")
   TURN_OFF_REQUEST(TurnOffRequest.class),
 
-  @SerializedName("TurnOffConfirmation")
+  @SerializedName("Response")
   TURN_OFF_CONFIRMATION(TurnOffConfirmation.class),
 
   @SerializedName("GetLockStateRequest")
