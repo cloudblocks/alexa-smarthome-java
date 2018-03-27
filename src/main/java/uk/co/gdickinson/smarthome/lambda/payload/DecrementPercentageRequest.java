@@ -1,6 +1,5 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
-import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
 /**
@@ -8,16 +7,7 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
  */
 public class DecrementPercentageRequest extends Request<DecrementPercentageConfirmation> {
-  private Endpoint endpoint;
   private Float deltaPercentage;
-
-  public Endpoint getEndpoint() {
-    return endpoint;
-  }
-
-  public void setEndpoint(Endpoint endpoint) {
-    this.endpoint = endpoint;
-  }
 
   public Float getDeltaPercentage() {
     return deltaPercentage;

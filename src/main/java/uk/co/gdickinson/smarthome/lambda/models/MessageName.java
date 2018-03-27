@@ -1,9 +1,47 @@
 package uk.co.gdickinson.smarthome.lambda.models;
 
-import com.google.gson.annotations.SerializedName;
-import uk.co.gdickinson.smarthome.lambda.payload.*;
-
 import java.lang.reflect.Type;
+
+import com.google.gson.annotations.SerializedName;
+
+import uk.co.gdickinson.smarthome.lambda.payload.DecrementColorTemperatureConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.DecrementColorTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.DecrementPercentageConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.DecrementPercentageRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.DecrementTargetTemperatureConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.DecrementTargetTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.DiscoverAppliancesRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.DiscoverAppliancesResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.GetLockStateRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.GetLockStateResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.GetTargetTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.GetTargetTemperatureResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.GetTemperatureReadingRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.GetTemperatureReadingResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.IncrementColorTemperatureConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.IncrementColorTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.IncrementPercentageConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.IncrementPercentageRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.IncrementTargetTemperatureConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.IncrementTargetTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.ReportStateRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.ReportStateResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.RetrieveCameraStreamUriRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.RetrieveCameraStreamUriResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.SetColorConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.SetColorRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.SetColorTemperatureConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.SetColorTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.SetLockStateConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.SetLockStateRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.SetPercentageConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.SetPercentageRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.SetTargetTemperatureConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.SetTargetTemperatureRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.TurnOffConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.TurnOffRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.TurnOnConfirmation;
+import uk.co.gdickinson.smarthome.lambda.payload.TurnOnRequest;
 
 public enum MessageName {
 
@@ -31,6 +69,12 @@ public enum MessageName {
   @SerializedName("DecrementPercentageConfirmation")
   DECREMENT_PERCENTAGE_CONFIRMATION(DecrementPercentageConfirmation.class),
 
+  @SerializedName("ReportState")
+  REPORT_STATE_REQUEST(ReportStateRequest.class),
+  
+  @SerializedName("StateReport")
+  STATE_REPORT_RESPONSE(ReportStateResponse.class),
+  
   @SerializedName("IncrementColorTemperatureRequest")
   INCREMENT_COLOR_TEMPERATURE_REQUEST(IncrementColorTemperatureRequest.class),
 

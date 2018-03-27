@@ -11,6 +11,7 @@ public class Capability {
     @SerializedName("interface")
     private String _interface;
     private String version;
+    private CapabilityProperties properties;
 
     public String getType() {
         return type;
@@ -35,4 +36,20 @@ public class Capability {
     public void setVersion(String version) {
         this.version = version;
     }
+
+    public CapabilityProperties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(CapabilityProperties properties) {
+        this.properties = properties;
+    }
+
+    @Override
+    public String toString() {
+        return "Capability [type=" + type + ", _interface=" + _interface + ", version=" + version + ", properties="
+                + properties + "]";
+    }
+    
+    
 }

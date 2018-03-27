@@ -7,6 +7,7 @@ public class Header {
   private String messageId;
   private MessageName name;
   private Namespace namespace;
+  private String correlationToken;
   private String payloadVersion;
 
   public String getMessageId() {
@@ -39,6 +40,15 @@ public class Header {
 
   public void setPayloadVersion(String payloadVersion) {
     this.payloadVersion = payloadVersion;
+  }
+  
+
+  public String getCorrelationToken() {
+      return correlationToken;
+  }
+    
+  public void setCorrelationToken(String correlationToken) {
+      this.correlationToken = correlationToken;
   }
 
   @Override

@@ -1,13 +1,15 @@
 package uk.co.gdickinson.smarthome.lambda.models;
 
 import java.util.List;
-import java.util.Map;
+
+import uk.co.gdickinson.smarthome.lambda.payload.Scope;
 
 public class Endpoint {
   private String endpointId;
   private String manufacturerName;
   private String friendlyName;
   private String description;
+  private Scope scope;
   private List<DisplayCategories> displayCategories;
   private List<Capability> capabilities = null;
 
@@ -58,4 +60,23 @@ public class Endpoint {
   public void setCapabilities(List<Capability> capabilities) {
     this.capabilities = capabilities;
   }
+
+  public Scope getScope() {
+    return scope;
+  }
+
+  public void setScope(Scope scope) {
+    this.scope = scope;
+}  
+
+@Override
+public String toString() {
+    return "Endpoint [endpointId=" + endpointId + ", manufacturerName=" + manufacturerName + ", friendlyName="
+            + friendlyName + ", description=" + description + ", displayCategories=" + displayCategories
+            + ", capabilities=" + capabilities + "]";
+}
+
+  
+  
+  
 }

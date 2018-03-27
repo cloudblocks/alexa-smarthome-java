@@ -1,9 +1,9 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
+import java.util.List;
+
 import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
-
-import java.util.List;
 
 public class DiscoverAppliancesResponse implements Response {
   private List<Endpoint> endpoints;
@@ -20,4 +20,12 @@ public class DiscoverAppliancesResponse implements Response {
   public void setDiscoveredEndpoints(List<Endpoint> endpoints) {
     this.endpoints = endpoints;
   }
+
+@Override
+public String toString() {
+    return "DiscoverAppliancesResponse [endpoints=" + endpoints + "]";
+}
+  
+  
+  
 }
