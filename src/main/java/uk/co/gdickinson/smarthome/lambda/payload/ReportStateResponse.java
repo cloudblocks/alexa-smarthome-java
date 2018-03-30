@@ -24,10 +24,6 @@ public class ReportStateResponse implements Response {
         return Optional.ofNullable(context);
     }
 
-    public Context getContext() {
-        return context;
-    }
-
     public void setContext(Context context) {
         this.context = context;
     }
