@@ -12,14 +12,12 @@ public enum Namespace {
   @SerializedName("Alexa")
   ALEXA("Alexa"),
   
-  @SerializedName(" Alexa.TemperatureSensor")
+  @SerializedName("Alexa.TemperatureSensor")
   TEMPERATURE_SENSOR("Alexa"),
 
   @SerializedName("Alexa.ConnectedHome.Query")
   QUERY("Alexa.ConnectedHome.Query");
   
- 
-
   private String stringValue;
 
   Namespace(String stringValue) {

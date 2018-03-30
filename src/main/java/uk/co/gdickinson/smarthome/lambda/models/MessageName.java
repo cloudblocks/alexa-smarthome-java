@@ -12,6 +12,7 @@ import uk.co.gdickinson.smarthome.lambda.payload.DecrementTargetTemperatureConfi
 import uk.co.gdickinson.smarthome.lambda.payload.DecrementTargetTemperatureRequest;
 import uk.co.gdickinson.smarthome.lambda.payload.DiscoverAppliancesRequest;
 import uk.co.gdickinson.smarthome.lambda.payload.DiscoverAppliancesResponse;
+import uk.co.gdickinson.smarthome.lambda.payload.ErrorResponse;
 import uk.co.gdickinson.smarthome.lambda.payload.GetLockStateRequest;
 import uk.co.gdickinson.smarthome.lambda.payload.GetLockStateResponse;
 import uk.co.gdickinson.smarthome.lambda.payload.GetTargetTemperatureRequest;
@@ -157,7 +158,10 @@ public enum MessageName {
   RETRIEVE_CAMERA_STREAM_URI_REQUEST(RetrieveCameraStreamUriRequest.class),
 
   @SerializedName("RetrieveCameraStreamUriResponse")
-  RETRIEVE_CAMERA_STREAM_URI_RESPONSE(RetrieveCameraStreamUriResponse.class);
+  RETRIEVE_CAMERA_STREAM_URI_RESPONSE(RetrieveCameraStreamUriResponse.class),
+  
+  @SerializedName("ErrorResponse")
+  ERROR_RESPONSE(ErrorResponse.class);
 
   public Type getDeserializationType() {
     return deserializationType;
