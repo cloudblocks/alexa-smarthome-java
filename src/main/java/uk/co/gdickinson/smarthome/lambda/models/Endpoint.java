@@ -67,16 +67,12 @@ public class Endpoint {
 
   public void setScope(Scope scope) {
     this.scope = scope;
-}  
+  }  
 
-@Override
-public String toString() {
-    return "Endpoint [endpointId=" + endpointId + ", manufacturerName=" + manufacturerName + ", friendlyName="
-            + friendlyName + ", description=" + description + ", displayCategories=" + displayCategories
-            + ", capabilities=" + capabilities + "]";
-}
-
-  
-  
-  
+    @Override
+    public String toString() {
+        return "Endpoint [endpointId=" + endpointId + ", manufacturerName=" + manufacturerName + ", friendlyName="
+                + friendlyName + ", description=" + description + ", displayCategories=" + displayCategories
+                + ", capabilities=" + capabilities + "]";
+    }
 }

@@ -21,11 +21,8 @@ public class DiscoverAppliancesResponse implements Response {
     this.endpoints = endpoints;
   }
 
-@Override
-public String toString() {
-    return "DiscoverAppliancesResponse [endpoints=" + endpoints + "]";
-}
-  
-  
-  
+    @Override
+    public String toString() {
+        return "DiscoverAppliancesResponse [endpoints=" + endpoints + "]";
+    }
 }

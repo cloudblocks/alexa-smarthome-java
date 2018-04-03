@@ -13,7 +13,7 @@ public enum Namespace {
   ALEXA("Alexa"),
   
   @SerializedName("Alexa.TemperatureSensor")
-  TEMPERATURE_SENSOR("Alexa"),
+  TEMPERATURE_SENSOR("Alexa.TemperatureSensor"),
 
   @SerializedName("Alexa.ConnectedHome.Query")
   QUERY("Alexa.ConnectedHome.Query");

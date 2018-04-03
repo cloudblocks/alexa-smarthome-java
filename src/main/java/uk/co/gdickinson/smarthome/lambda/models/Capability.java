@@ -9,7 +9,7 @@ public class Capability {
     private String type;
 
     @SerializedName("interface")
-    private String _interface;
+    private Namespace _interface;
     private String version;
     private CapabilityProperties properties;
 
@@ -21,11 +21,11 @@ public class Capability {
         this.type = type;
     }
 
-    public String getInterface() {
+    public Namespace getInterface() {
         return _interface;
     }
 
-    public void setInterface(String _interface) {
+    public void setInterface(Namespace _interface) {
         this._interface = _interface;
     }
 
