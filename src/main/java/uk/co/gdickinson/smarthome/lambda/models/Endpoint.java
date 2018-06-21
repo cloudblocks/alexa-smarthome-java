@@ -12,6 +12,7 @@ public class Endpoint {
   private Scope scope;
   private List<DisplayCategories> displayCategories;
   private List<Capability> capabilities = null;
+  private Cookie cookie = new Cookie();
 
   public List<DisplayCategories> getDisplayCategories() {
     return displayCategories;
@@ -68,6 +69,15 @@ public class Endpoint {
   public void setScope(Scope scope) {
     this.scope = scope;
   }  
+  
+
+  public Cookie getCookie() {
+      return cookie;
+  }
+
+  public void setCookie(Cookie cookie) {
+      this.cookie = cookie;
+  }
 
     @Override
     public String toString() {

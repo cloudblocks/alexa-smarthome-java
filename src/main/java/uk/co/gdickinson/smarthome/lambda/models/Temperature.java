@@ -1,6 +1,7 @@
 package uk.co.gdickinson.smarthome.lambda.models;
 
 public class Temperature {
+  
   private Scale scale;
   private float value;
 

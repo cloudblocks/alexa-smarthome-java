@@ -39,12 +39,8 @@ import uk.co.gdickinson.smarthome.lambda.payload.SetPercentageConfirmation;
 import uk.co.gdickinson.smarthome.lambda.payload.SetPercentageRequest;
 import uk.co.gdickinson.smarthome.lambda.payload.SetTargetTemperatureConfirmation;
 import uk.co.gdickinson.smarthome.lambda.payload.SetTargetTemperatureRequest;
-import uk.co.gdickinson.smarthome.lambda.payload.TurnOffConfirmation;
-import uk.co.gdickinson.smarthome.lambda.payload.TurnOffRequest;
-import uk.co.gdickinson.smarthome.lambda.payload.TurnOnConfirmation;
-import uk.co.gdickinson.smarthome.lambda.payload.TurnOnRequest;
 
-public enum MessageName {
+public enum MessageName {  
 
   @SerializedName("DecrementTargetTemperatureRequest")
   DECREMENT_TARGET_TEMPERATURE_REQUEST(DecrementTargetTemperatureRequest.class),
@@ -57,6 +53,9 @@ public enum MessageName {
 
   @SerializedName("Discover.Response")
   DISCOVER_APPLIANCES_RESPONSE(DiscoverAppliancesResponse.class),
+  
+  @SerializedName("Response")
+  RESPONSE(Object.class),
 
   @SerializedName("DecrementColorTemperatureRequest")
   DECREMENT_COLOR_TEMPERATURE_REQUEST(DecrementColorTemperatureRequest.class),
@@ -118,23 +117,11 @@ public enum MessageName {
   @SerializedName("SetPercentageConfirmation")
   SET_PERCENTAGE_CONFIRMATION(SetPercentageConfirmation.class),
 
-  @SerializedName("SetTargetTemperatureRequest")
+  @SerializedName("SetTargetTemperature")
   SET_TARGET_TEMPERATURE_REQUEST(SetTargetTemperatureRequest.class),
 
-  @SerializedName("SetTargetTemperatureConfirmation")
+  @SerializedName("Response")
   SET_TARGET_TEMPERATURE_CONFIRMATION(SetTargetTemperatureConfirmation.class),
-
-  @SerializedName("TurnOn")
-  TURN_ON_REQUEST(TurnOnRequest.class),
-
-  @SerializedName("Response")
-  TURN_ON_CONFIRMATION(TurnOnConfirmation.class),
-
-  @SerializedName("TurnOff")
-  TURN_OFF_REQUEST(TurnOffRequest.class),
-
-  @SerializedName("Response")
-  TURN_OFF_CONFIRMATION(TurnOffConfirmation.class),
 
   @SerializedName("GetLockStateRequest")
   GET_LOCK_STATE_REQUEST(GetLockStateRequest.class),

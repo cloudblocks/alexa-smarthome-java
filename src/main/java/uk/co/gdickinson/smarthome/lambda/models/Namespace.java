@@ -14,6 +14,9 @@ public enum Namespace {
   
   @SerializedName("Alexa.TemperatureSensor")
   TEMPERATURE_SENSOR("Alexa.TemperatureSensor"),
+  
+  @SerializedName("Alexa.ThermostatController")
+  THERMOSTAT_CONTROLLER("Alexa.ThermostatController"),
 
   @SerializedName("Alexa.ConnectedHome.Query")
   QUERY("Alexa.ConnectedHome.Query");
