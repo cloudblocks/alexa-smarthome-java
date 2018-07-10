@@ -4,6 +4,8 @@ import java.lang.reflect.Type;
 
 import com.google.gson.annotations.SerializedName;
 
+import uk.co.gdickinson.smarthome.lambda.payload.AcceptGrantRequest;
+import uk.co.gdickinson.smarthome.lambda.payload.AcceptGrantResponse;
 import uk.co.gdickinson.smarthome.lambda.payload.DecrementColorTemperatureConfirmation;
 import uk.co.gdickinson.smarthome.lambda.payload.DecrementColorTemperatureRequest;
 import uk.co.gdickinson.smarthome.lambda.payload.DecrementPercentageConfirmation;
@@ -50,6 +52,12 @@ public enum MessageName {
 
   @SerializedName("Discover")
   DISCOVER_APPLIANCES_REQUEST(DiscoverAppliancesRequest.class),
+  
+  @SerializedName("AcceptGrant")
+  ACCEPT_GRANT_REQUEST(AcceptGrantRequest.class),
+  
+  @SerializedName("AcceptGrant.Response")
+  ACCEPT_GRANT_RESPONSE(AcceptGrantResponse.class),
 
   @SerializedName("Discover.Response")
   DISCOVER_APPLIANCES_RESPONSE(DiscoverAppliancesResponse.class),
