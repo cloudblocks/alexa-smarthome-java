@@ -5,6 +5,9 @@ import com.google.gson.annotations.SerializedName;
 public enum Namespace {
   @SerializedName("Alexa.Discovery")
   DISCOVERY("Alexa.Discovery"),
+  
+  @SerializedName("Alexa.Authorization")
+  AUTHORIZATION("Alexa.Authorization"),
 
   @SerializedName("Alexa.PowerController")
   CONTROL("Alexa.ConnectedHome.Control"),
