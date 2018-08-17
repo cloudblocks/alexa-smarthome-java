@@ -5,12 +5,13 @@ import java.util.Optional;
 import uk.co.gdickinson.smarthome.lambda.models.Context;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class SetTargetTemperatureConfirmation implements Response {
+public class ReportStateResponse implements Response {
+
     private Context context;
     
     @Override
     public MessageName getMessageName() {
-        return MessageName.SET_TARGET_TEMPERATURE_CONFIRMATION;
+        return MessageName.STATE_REPORT_RESPONSE;
     }
     
     @Override

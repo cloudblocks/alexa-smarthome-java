@@ -1,9 +1,9 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
-import com.google.gson.JsonElement;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
-import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
+
+import com.google.gson.JsonElement;
 
 public class Directive {
     private Header header;

@@ -1,12 +1,11 @@
 package uk.co.gdickinson.smarthome.lambda.payload;
 
-import java.util.HashMap;
-import java.util.Map;
+import uk.co.gdickinson.smarthome.lambda.models.Endpoint;
 
 public class Event {
     private Header header;
     private Payload payload;
-    private Map<String, Object> additionalProperties = new HashMap<>();
+    private Endpoint endpoint;
 
     public Header getHeader() {
         return header;
@@ -24,12 +23,12 @@ public class Event {
         this.payload = payload;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+    public Endpoint getEndpoint() {
+        return endpoint;
     }
 
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
+    public void setEndpoint(Endpoint endpoint) {
+        this.endpoint = endpoint;
     }
 
 }
